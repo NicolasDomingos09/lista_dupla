@@ -106,6 +106,15 @@ public class ListaDupla<T> {
 		setTotal(++total);
 	}
 	
+	public No<T> last() throws IllegalArgumentException{
+		if (this.inicio == null )
+			throw new IllegalArgumentException ("Não existe item na lista");
+		No<T> buffer = this.inicio;
+		while(buffer.getProximo() != null)
+			buffer = buffer.getProximo();
+		return buffer;
+	}
+	
 	public void remove(int index){
 		if(index == 0){
 			this.inicio.setValor(null);

@@ -152,7 +152,7 @@ public class ListaDupla<T> {
 			buffer = buffer.getProximo();
 			builder.append(buffer.getValor());
 		}
-		build.append("]");
+		builder.append("]");
 		return builder.toString();
 	}
 }
